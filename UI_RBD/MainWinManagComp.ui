@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TransportCompanyWindow</class>
- <widget class="QMainWindow" name="TransportCompanyWindow">
+ <class>ManagementCompanyWindow</class>
+ <widget class="QMainWindow" name="ManagementCompanyWindow">
   <property name="geometry">
    <rect>
     <x>0</x>

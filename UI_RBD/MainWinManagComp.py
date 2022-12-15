@@ -11,14 +11,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_TransportCompanyWindow(object):
-    def setupUi(self, TransportCompanyWindow):
-        TransportCompanyWindow.setObjectName("TransportCompanyWindow")
-        TransportCompanyWindow.resize(1340, 871)
+class Ui_ManagementCompanyWindow(object):
+    def setupUi(self, ManagementCompanyWindow):
+        ManagementCompanyWindow.setObjectName("ManagementCompanyWindow")
+        ManagementCompanyWindow.resize(1340, 871)
         font = QtGui.QFont()
         font.setPointSize(14)
-        TransportCompanyWindow.setFont(font)
-        self.centralwidget = QtWidgets.QWidget(TransportCompanyWindow)
+        ManagementCompanyWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(ManagementCompanyWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -71,25 +71,25 @@ class Ui_TransportCompanyWindow(object):
         self.horizontalLayout_2.setStretch(0, 10)
         self.horizontalLayout_2.setStretch(1, 3)
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
-        TransportCompanyWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(TransportCompanyWindow)
+        ManagementCompanyWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(ManagementCompanyWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1340, 31))
         self.menubar.setObjectName("menubar")
-        TransportCompanyWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(TransportCompanyWindow)
+        ManagementCompanyWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(ManagementCompanyWindow)
         self.statusbar.setObjectName("statusbar")
-        TransportCompanyWindow.setStatusBar(self.statusbar)
+        ManagementCompanyWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(TransportCompanyWindow)
-        QtCore.QMetaObject.connectSlotsByName(TransportCompanyWindow)
+        self.retranslateUi(ManagementCompanyWindow)
+        QtCore.QMetaObject.connectSlotsByName(ManagementCompanyWindow)
 
-    def retranslateUi(self, TransportCompanyWindow):
+    def retranslateUi(self, ManagementCompanyWindow):
         _translate = QtCore.QCoreApplication.translate
-        TransportCompanyWindow.setWindowTitle(_translate("TransportCompanyWindow", "Управляющая компания"))
-        self.radioBtnDriver.setText(_translate("TransportCompanyWindow", "Водители"))
-        self.radioBtnTransportCompany.setText(_translate("TransportCompanyWindow", "Транспортные фирмы"))
-        self.radioBtnRoute.setText(_translate("TransportCompanyWindow", "Маршруты"))
-        self.radioButtonSensor.setText(_translate("TransportCompanyWindow", "Сенсоры"))
-        self.radioBtnCamera.setText(_translate("TransportCompanyWindow", "Камеры"))
-        self.btnCheck.setText(_translate("TransportCompanyWindow", "Смотреть"))
-        self.btnAdd.setText(_translate("TransportCompanyWindow", "Добавить"))
+        ManagementCompanyWindow.setWindowTitle(_translate("ManagementCompanyWindow", "Управляющая компания"))
+        self.radioBtnDriver.setText(_translate("ManagementCompanyWindow", "Водители"))
+        self.radioBtnTransportCompany.setText(_translate("ManagementCompanyWindow", "Транспортные фирмы"))
+        self.radioBtnRoute.setText(_translate("ManagementCompanyWindow", "Маршруты"))
+        self.radioButtonSensor.setText(_translate("ManagementCompanyWindow", "Сенсоры"))
+        self.radioBtnCamera.setText(_translate("ManagementCompanyWindow", "Камеры"))
+        self.btnCheck.setText(_translate("ManagementCompanyWindow", "Смотреть"))
+        self.btnAdd.setText(_translate("ManagementCompanyWindow", "Добавить"))

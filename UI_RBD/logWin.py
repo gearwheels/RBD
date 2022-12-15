@@ -75,6 +75,6 @@ class Ui_LoginWindow(object):
         self.labelPassword.setText(_translate("LoginWindow", "Пароль"))
         self.labelOrganization.setText(_translate("LoginWindow", "Войти как"))
         self.comboBox.setItemText(0, _translate("LoginWindow", "Управляющая компания"))
-        self.comboBox.setItemText(1, _translate("LoginWindow", "Дорожная компания "))
+        self.comboBox.setItemText(1, _translate("LoginWindow", "Дорожная компания"))
         self.comboBox.setItemText(2, _translate("LoginWindow", "Транспортная компания"))
         self.btnEnter.setText(_translate("LoginWindow", "Войти "))

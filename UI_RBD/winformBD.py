@@ -5,6 +5,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QAc
 
 from logWin import Ui_LoginWindow
 from MainWin import Ui_TransportCompanyWindow
+from MainWinRoadComp import Ui_RoadCompanyWindow
+from MainWinManagComp import Ui_ManagementCompanyWindow
 
 class generalMainWindow(QMainWindow):
     def __init__(self):
@@ -18,10 +20,11 @@ class mainMenuWindow(generalMainWindow):
     def __init__(self):
         super().__init__()
         self.ui = Ui_TransportCompanyWindow()
-        self.ui.setupUi(self)
-        self.loginDialogWindow = loginDialogWindow() # стартовое диалоговое окно для регистрации в программе 
+        # self.ui.setupUi(self)
+        self.loginDialogWindow = loginDialogWindow(self) # стартовое диалоговое окно для регистрации в программе 
         self.loginDialogWindow.exec_() # его запуск в отдельном потоке
         self.resize(self.width/2, self.height/2)
+        self.ui.setupUi(self)
 
 class generalDialogWindow(QDialog):
     def __init__(self):
@@ -32,16 +35,23 @@ class generalDialogWindow(QDialog):
         
 
 class loginDialogWindow(generalDialogWindow):
-    def __init__(self):
+    def __init__(self, root):
         super().__init__()
+        self.mainMenuWindow = root
         self.ui = Ui_LoginWindow()
         self.ui.setupUi(self)
         self.resize(self.width/2, self.height/2)
         self.ui.btnEnter.clicked.connect(self.openTransportWin)
 
-    def openTransportWin(self):
+    def openTransportWin(self): # Ui_RoadCompanyWindow() Ui_ManagementCompanyWindow
         if self.ui.comboBox.currentText() == "Транспортная компания":
-            self.close()
+            self.mainMenuWindow.ui = Ui_TransportCompanyWindow()
+        elif self.ui.comboBox.currentText() == "Дорожная компания":
+            self.mainMenuWindow.ui = Ui_RoadCompanyWindow()
+        elif self.ui.comboBox.currentText() == "Управляющая компания":
+            self.mainMenuWindow.ui = Ui_ManagementCompanyWindow()
+        
+        self.close()
 
 
 if __name__ == "__main__":
