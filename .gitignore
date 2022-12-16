@@ -1,0 +1,3 @@
+*.pyc
+/UI_RBD/db.py
+/UI_RBD/database.ini
