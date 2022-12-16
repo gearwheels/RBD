@@ -4,7 +4,7 @@ from PyQt5.QtCore import QRect, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QAction, QDialog
 
 from logWin import Ui_LoginWindow
-from MainWin import Ui_TransportCompanyWindow
+from MainWinTransComp import Ui_TransportCompanyWindow
 from MainWinRoadComp import Ui_RoadCompanyWindow
 from MainWinManagComp import Ui_ManagementCompanyWindow
 
@@ -19,12 +19,22 @@ class generalMainWindow(QMainWindow):
 class mainMenuWindow(generalMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_TransportCompanyWindow()
-        # self.ui.setupUi(self)
+        self.ui = Ui_ManagementCompanyWindow()
+        self.ui.setupUi(self)
         self.loginDialogWindow = loginDialogWindow(self) # стартовое диалоговое окно для регистрации в программе 
         self.loginDialogWindow.exec_() # его запуск в отдельном потоке
         self.resize(self.width/2, self.height/2)
-        self.ui.setupUi(self)
+
+        self._connectionInit()
+
+    def _connectionInit(self):
+        self.ui.btnBack.clicked.connect(self.back)
+
+    def back(self):
+        self.hide()
+
+        self.loginDialogWindow.show() # его запуск в отдельном потоке
+        
 
 class generalDialogWindow(QDialog):
     def __init__(self):
@@ -36,7 +46,7 @@ class generalDialogWindow(QDialog):
 
 class loginDialogWindow(generalDialogWindow):
     def __init__(self, root):
-        super().__init__()
+        super().__init__() # инициализация
         self.mainMenuWindow = root
         self.ui = Ui_LoginWindow()
         self.ui.setupUi(self)
@@ -51,7 +61,10 @@ class loginDialogWindow(generalDialogWindow):
         elif self.ui.comboBox.currentText() == "Управляющая компания":
             self.mainMenuWindow.ui = Ui_ManagementCompanyWindow()
         
-        self.close()
+        self.mainMenuWindow.ui.setupUi(self.mainMenuWindow)
+        self.mainMenuWindow._connectionInit()
+        self.hide()
+        self.mainMenuWindow.show()
 
 
 if __name__ == "__main__":

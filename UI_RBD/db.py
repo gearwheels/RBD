@@ -5,7 +5,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 from configparser import ConfigParser
 
-def config(filename='/Users/valeriabudnikova/Desktop/рбд/UI_RBD/database.ini', section='postgresql'):
+def config(filename='D:\education\education\RBD\database.ini', section='postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file
