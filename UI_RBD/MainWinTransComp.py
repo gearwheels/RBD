@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from db import *
+
 
 class Ui_TransportCompanyWindow(object):
     def setupUi(self, TransportCompanyWindow):
@@ -81,8 +81,8 @@ class Ui_TransportCompanyWindow(object):
         self.statusbar.setObjectName("statusbar")
         TransportCompanyWindow.setStatusBar(self.statusbar)
 
-        self.btnCheck.clicked.connect(self.Show_tabel)
-        self.btnAdd.clicked.connect(self.Add_data_to_tabel)
+        # self.btnCheck.clicked.connect(self.Show_tabel)
+        # self.btnAdd.clicked.connect(self.Add_data_to_tabel)
 
         self.retranslateUi(TransportCompanyWindow)
         QtCore.QMetaObject.connectSlotsByName(TransportCompanyWindow)
@@ -99,44 +99,4 @@ class Ui_TransportCompanyWindow(object):
 
         
 
-    def Show_tabel(self):
-        while(self.tableWidget.rowCount() > 0):
-            self.tableWidget.removeRow(0)
-        if self.radioBtnDriver.isChecked():
-            name_table = 'driver'
-        elif self.radioBtnTransportCompany.isChecked():
-            name_table = 'management_company'
-        else:
-            return
-        data = connect(func=Get_data_from_table, name_table=name_table)
-        for tuple in data:
-            self.tableWidget.insertRow(self.tableWidget.rowCount()) 
-            self.tableWidget.setColumnCount(len(tuple))
-            for i, t in enumerate(tuple):
-                item = QtWidgets.QTableWidgetItem(str(t))
-                self.tableWidget.setItem(self.tableWidget.rowCount()-1, i, item) 
-        self.tableWidget.insertRow(self.tableWidget.rowCount()) 
-        item = QtWidgets.QTableWidgetItem(str(self.tableWidget.rowCount()))
-        self.tableWidget.setItem(self.tableWidget.rowCount()-1, 0, item) 
     
-    def Add_data_to_tabel(self):
-        if self.radioBtnDriver.isChecked():
-            name_table = 'driver'
-        elif self.radioBtnTransportCompany.isChecked():
-            name_table = 'management_company'
-        data = []
-        try:
-            i = self.tableWidget.rowCount() - 1
-            for j in range(self.tableWidget.columnCount()):
-                item = self.tableWidget.item(i, j)
-                data += [item.text()]
-        except:
-            print("ошибка")
-            data = []
-        if len(data) != 0:
-            for i, d in enumerate(data):
-                print(i, d)
-            connect(Insert_data_to_table, name_table, data) 
-            self.tableWidget.insertRow(self.tableWidget.rowCount()) 
-            item = QtWidgets.QTableWidgetItem(str(self.tableWidget.rowCount()))
-            self.tableWidget.setItem(self.tableWidget.rowCount()-1, 0, item)     
