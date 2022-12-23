@@ -2,7 +2,7 @@ import sys
 from db import *
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import QRect, Qt
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QAction, QDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox, QAction, QDialog, QLineEdit
 
 from logWin import Ui_LoginWindow
 from MainWinTransComp import Ui_TransportCompanyWindow
@@ -105,6 +105,7 @@ class loginDialogWindow(generalDialogWindow):
         self.password = "1234"
         quit = QAction("Quit", self) # событие выхода
         quit.triggered.connect(self.closeEvent) # если событие выхода срабатывает то вызывается closeEvent
+        self.ui.lineEdit_2.setEchoMode(QLineEdit.Password)
 
 
     def openTransportWin(self): # Ui_RoadCompanyWindow() Ui_ManagementCompanyWindow
