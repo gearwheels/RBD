@@ -1,17 +1,23 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T20:48:21.643Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.2.806 Yowser/2.5 Safari/537.36" etag="F9cJ3hmuc72ZJM6AcxSV" version="21.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-27T21:02:09.311Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.2.806 Yowser/2.5 Safari/537.36" etag="4XFXZWHpPrDhlPpxkfKO" version="21.2.2" type="github">
   <diagram name="Страница 1" id="IcxmnfmYhnehTO9_9P7T">
     <mxGraphModel dx="1430" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jlWjaLv-AGQAPDDYFnN8-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="240" y="260" width="120" height="60" as="geometry" />
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-1" value="Датасет" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="300" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jlWjaLv-AGQAPDDYFnN8-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-2" value="Полносвязанная нейронная сеть" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="440" width="180" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jlWjaLv-AGQAPDDYFnN8-3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-3" value="Косинусная метрика" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="440" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-6" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="760" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
