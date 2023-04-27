@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2023-04-27T21:03:14.432Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.2.806 Yowser/2.5 Safari/537.36" etag="vuAhkTziEJH4UWx0J3wL" version="21.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-27T21:12:02.583Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.2.806 Yowser/2.5 Safari/537.36" etag="g2iKIwaSifmwdDRhRR4p" version="21.2.2" type="github">
   <diagram name="Страница 1" id="IcxmnfmYhnehTO9_9P7T">
-    <mxGraphModel dx="1430" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="830" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="jlWjaLv-AGQAPDDYFnN8-1" value="Датасет" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="240" y="300" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jlWjaLv-AGQAPDDYFnN8-2" value="Полносвязанная нейронная сеть" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-2" value="Классификация полносвязной нейронной сетью" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="440" width="180" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jlWjaLv-AGQAPDDYFnN8-3" value="Косинусная метрика" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-3" value="Вычисление косинусного расстояния&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="360" y="440" width="180" height="80" as="geometry" />
         </mxCell>
         <mxCell id="jlWjaLv-AGQAPDDYFnN8-5" value="Обработка результатов классификации и результатов подсчета метрики" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -18,6 +18,24 @@
         </mxCell>
         <mxCell id="jlWjaLv-AGQAPDDYFnN8-6" value="Рейтинг основанный на полученных результатах" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="230" y="760" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.477;exitY=1.029;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jlWjaLv-AGQAPDDYFnN8-2" target="jlWjaLv-AGQAPDDYFnN8-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="620" as="sourcePoint" />
+            <mxPoint x="170" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="146" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jlWjaLv-AGQAPDDYFnN8-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.477;exitY=1.029;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="jlWjaLv-AGQAPDDYFnN8-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="520" as="sourcePoint" />
+            <mxPoint x="410" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="640" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
